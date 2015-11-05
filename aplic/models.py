@@ -1,10 +1,7 @@
 from django.db import models
-from django.core.validators import MaxLengthValidator
-from test.test_imageop import MAX_LEN
-
 
 class Empresa(models.Model):
-    identificacion       = models.CharField(max_length=15)
+    identificacion       =models.CharField(max_length=15)
     razonSocial          = models.CharField(max_length=200, blank=True)
     direccion            = models.CharField(max_length=100, blank=True)
     idEstadoEmpresa      = models.IntegerField()

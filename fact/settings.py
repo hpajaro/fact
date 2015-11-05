@@ -57,7 +57,7 @@ ROOT_URLCONF = 'fact.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["/Proy/fact/templates/"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -101,4 +101,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_ROOT='/Proy/fact/static/'
+#STATICFILES_DIRS = (
+#   '/Proy/fact/static/',
+#)
+
+STATIC_URL = "/static/"
+
