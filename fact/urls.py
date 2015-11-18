@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*- 
 """fact URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -19,6 +20,11 @@ from django.conf import settings
 from django.conf.urls.static import static
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^clientes/','aplic.views.index'),
-    url(r'^$','aplic.views.prueba')
-]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    url(r"^clientes/$",'aplic.views.clientes'),
+    url(r'^clientes/crear/$','aplic.views.Crear_cliente'),
+    url(r'^parametro/crear/$','aplic.views.Crear_parametro'),
+    url(r'^$','aplic.views.index',name='incio'),
+    url(r'^login/$','auten.views.login_view',name='vista_login'),
+    url(r'^logout/$','auten.views.logout_view',name='vista_logout')
+    ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
